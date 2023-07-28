@@ -22,12 +22,12 @@
 }
 
 :host ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled){
-    background-color: white !important; 
-  }
+  background-color: white !important; 
+}
 
-  .form-val {
-    margin-bottom: 10px;
-    margin-top: 10px;
-  }
+.form-val {
+   margin-bottom: 10px;
+   margin-top: 10px;
+}
 
 
