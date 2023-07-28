@@ -1,4 +1,4 @@
-<mat-card class="login-page">
+<mat-card class="login-page" [ngClass]="{'loginPageMinLengthError': email.errors?.minlength}">
   <mat-card-title class="loginTitle">Login</mat-card-title>
   <mat-card-content>
 
@@ -8,10 +8,14 @@
 
         <mat-label>Email</mat-label>
         <input matInput type="email" name="email"
-               ngModel #email="ngModel" placeholder="Email" required>
+               ngModel #email="ngModel" placeholder="Email" required minlength="3" maxlength="20" email>
+               <!-- pattern="[a-z]+" -->
 
         <mat-error *ngIf="email.errors?.required">The email is mandatory</mat-error>
-
+        <mat-error *ngIf="email.errors?.minlength">Your email must have minimum {{email.errors?.minlength.requiredLength}} chars, 
+          but it only has {{email.errors?.minlength.actualLength}}.</mat-error>
+        <mat-error *ngIf="email.errors?.email">This is not a valid email.</mat-error>
+        
       </mat-form-field>
 
       <mat-form-field>
