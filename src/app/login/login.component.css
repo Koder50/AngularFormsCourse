@@ -1,12 +1,16 @@
 
 
 .login-page {
-  max-width: 350px;
+  max-width: 500px;;
   margin: 50px auto 0 auto;
 }
 
 .loginPageMinLengthError {
   max-width: 400px;
+}
+<!--is going to be used even when both with loginPageMinLengthError are true, because is lower in css file, so is more important-->
+:host ::ng-deep .loginPagePasswordStrengthError {
+  max-width: 500px;
 }
 
 .login-form {
@@ -26,7 +30,7 @@
 }
 
 :host ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled){
-  background-color: white !important; 
+  background-color: white !important;
 }
 
 .form-val {
@@ -37,5 +41,12 @@
 /* input.ng-invalid.ng-touched {
   border: 3px solid red;
 } */
+
+.errorField {
+  height: 16px;
+  font-size: 12px;
+  margin-top: -17px;
+  margin-left: 18px;
+}
 
 

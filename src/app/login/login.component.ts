@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
+  val={
+    email: "hello@gmail.com",
+    password: "123456"
+  };
 
   constructor() {
 
@@ -20,10 +24,11 @@ export class LoginComponent implements OnInit {
 
   login(loginForm,submit) {
     console.log(loginForm.value,loginForm.valid,submit);
+    console.log("val ",this.val);
   }
 
-  onEmailChange(change) {
-    console.log(change);
-  }
+  // onEmailChange(change) {
+  //   console.log(change);
+  // }
 
 }
